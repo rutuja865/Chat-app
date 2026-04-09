@@ -1,5 +1,4 @@
 # Chat-app
-<!-- hi -->
 <!-- create folders server client, socket -->
 <!-- in server npm init --yes -->
 <!-- npm i express mongoose cors dotenv -->
@@ -50,3 +49,53 @@ import {BrowserRouter} from 'react-router-dom';
 
 <!-- 2.react bootstrap -->
 <!-- npm i react-bootstrap bootstrap -->
+
+<!-- 3.context api for form data frontend data-->
+<!-- always this syntax, create context create contextprovider function in componewnt call it by useContext -->
+<!-- in register component -->
+<!-- const {registerInfo}=useContext(AuthContext) -->
+<!-- create context folder with AuthContext.jsx
+inside that export const AuthContext=createContext();
+export const AuthContextProvider=({children})=>{
+    const [registeInfo,setRegisterInfo]=useState({
+        name:"",
+        email:"",
+        password:""
+    })
+    call backfunction for reducing redundancy cache function
+    const updateRegister=useCallback((info)=>{
+setRegisterInfo(info)
+    },[])
+    return (
+        <AuthContext.Provider value={{all states,setstates,functions}}>
+        {children}
+        </AuthContext.Provider>
+    )
+} -->
+
+<!-- chat apis -->
+<!-- create model, import it in controller, import controller in routes, import routes in index.js -->
+<!-- in controller //createChat
+//findUsersChats
+//findChat -->
+<!-- in routes router.post("/",createChat);
+router.get("/:userId",findUsersChats);
+router.get("/find/:firstId/:secondId",findChat); -->
+
+<!-- in client install  npm i moment for timestamp -->
+<!-- npm i react-input-emoji -->
+
+
+<!-- socket -->
+<!-- create socket folder , in cmd write cd socket -> npm init -yes -->
+<!-- npm i socket.io -->
+<!-- in client -->
+<!-- cd client ->npm i socket.io-client -->
+<!-- in chatcontext file  -->
+<!-- in socket ->cd socket ->npm install nodemon --save-dev ->npx nodemon-->
+
+<!-- working on removing notification on clicking chat 1:03:26 -->
+
+
+<!-- if got any error for socket cors error, close all terminals, cd all folderes and rerun all servers -->
+<!-- client-5173, sever -2000 -->
